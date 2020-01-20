@@ -1,0 +1,52 @@
+<html>
+<head>
+<script>
+	function zoek(){
+		var x = document.getElementById("ingevoerdehond").value;
+		var uitkomst = document.getElementById("uitkomstdiv");
+		if( x == "King Charles" || x == "Labrador" || x == "Tekkel" || x == "Yorkshire Terrier" ){
+			uitkomst.innerHTML = "Wat een geluk! Deze hond hebben wij nu in huis.";
+			uitkomst.style.backgroundColor = "lightgreen";
+			uitkomst.style.fontFamily = "arial";
+			uitkomst.style.fontStyle = "italic";
+			uitkomst.style.fontSize = 32;
+			
+			
+			if ( x == "King Charles"){
+				twaalfmaken(12);	
+			}
+			
+		} else {
+			uitkomst.innerHTML = "Excuus, deze hond hebben wij momenteel niet op voorraad.";
+			uitkomst.style.backgroundColor = "crimson";
+			uitkomst.style.fontFamily = "arial";
+			uitkomst.style.fontStyle = "underscore";
+			uitkomst.style.fontSize = 32;
+			
+		}
+	}
+	function twaalfmaken(getal){
+		var teller = document.getElementById("aantaldogs");
+		teller.innerHTML = getal;
+	}
+	
+</script>
+</head>
+
+<body>
+<img id=plaatje src=kingcharles.jpg  align="center" height="300">
+<br></br>
+<div align="center">Watvoor hond zoekt u?</div>
+<input id=ingevoerdehond value=Soort >
+<input value=Zoek type=button onclick=zoek()>
+<br></br>
+<div id=uitkomstdiv> uitkomst </div>
+<br></br>
+<div allign="center", onclick=aantal()>Hoeveel honden hebben wij hiervan?</div>
+<br></br>
+<div id=aantaldogs> ---- </div>
+
+
+
+</body>
+</html>
