@@ -1,4 +1,16 @@
+<script>
+	function guess(){
+		var x = document.getElementById("ingevoerdeletter").value;
+		if( x == "d" || x == "o" || x == "l" || x == "y" ){
+			alert("Yeah, you're getting close");
+		} else {
+			alert("Meh, sorry mate :( Try Again");
+		}
+	}
+</script>
+
 <img src=galgje2.jpg>
-<br>
+<br></br>
 <div>-----</div>
-<input><input value=Gokje wagen! type=button>
+<input id=ingevoerdeletter value=beginnen >
+<input value=Guess! type=button onclick=guess()>
