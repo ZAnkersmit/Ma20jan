@@ -1,16 +1,44 @@
+<html>
+<head>
 <script>
+	var aantalguesses = 0;
 	function guess(){
+		var deDOM = document.getElementsByTagName("html");
+		console.log(deDOM);
 		var x = document.getElementById("ingevoerdeletter").value;
+		var uitkomst = document.getElementById("uitkomstdiv");
 		if( x == "d" || x == "o" || x == "l" || x == "y" ){
-			alert("Yeah, you're getting close");
+			uitkomst.innerHTML = "Yeah, you're getting close";
+			uitkomst.style.backgroundColor = "lightgreen";
+			uitkomst.style.fontFamily = "arial";
+			uitkomst.style.fontStyle = "italic";
+			uitkomst.style.fontSize = 32;
+			aantalguesses += 1 ;
 		} else {
-			alert("Meh, sorry mate :( Try Again");
+			uitkomst.innerHTML = "Meh, sorry mate :( Try Again";
+			uitkomst.style.backgroundColor = "crimson";
+			uitkomst.style.fontFamily = "arial";
+			uitkomst.style.fontStyle = "underscore";
+			uitkomst.style.fontSize = 32;
+			aantalguesses += 1 ;
+		}
+		console.log(aantalguesses);
+		if(aantalguesses == 9){
+			alert("HA HA You're gone, loser");
+			aantalguesses = 0 ;
 		}
 	}
 </script>
+</head>
 
+<body>
 <img src=galgje2.jpg>
 <br></br>
 <div>-----</div>
-<input id=ingevoerdeletter value=beginnen >
+<input id=ingevoerdeletter value=Start >
 <input value=Guess! type=button onclick=guess()>
+<br></br>
+<div id=uitkomstdiv> uitkomst </div>
+
+</body>
+</html>
