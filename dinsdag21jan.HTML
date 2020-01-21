@@ -1,20 +1,41 @@
 <html>
-<head>
+	<head>
+		<script>
+			function waarschuwing(){
+				console.log("This is an alert!");
+				rekenen(6);
+				rekenen("tachtig");
+			}
+			function oefenloop(){
+				for(var x=0; x<100; x++){
+					console.log(x);	
+				}
+			}
+			function verzameling(){
+				var mijnAlbum = [1,2,3,4,5,6,1974,20]
+				console.log(mijnAlbum);
+				console.log(gimmesomething());
 
-<script>
-	function waarschuwing(){
-		alert("This is an alert!");
-	}
-	
-</script>
-</head>
+				for(var r = 0; r < mijnAlbum.length; r++){
+					console.log("In mijn album: "+ mijnAlbum[r]);
+				}
+			}
+			function gimmesomething(){
+				return "Kadootje!<3";
+			}
+			function rekenen(mijnparanummer){
+				var getal1=74
+				var getal2=6
+				var totaal = getal1 + mijnparanummer;
+				console.log("Ik tel alles op jonge en dat is "+totaal+"!!")
+			}
+		</script>
+	</head>
 
-<body style="text-align:center" bgcolor="mistyrose">
-<br></br>
-<button align="center" type="button" onclick=waarschuwing()>Klik</button>
-
-<br></br>
-
-
-</body>
+	<body style="text-align:center" bgcolor="mistyrose">
+		<br></br>
+		<button align="center" type="button" onclick=verzameling()>Klik</button>
+		<br></br>
+		<div>x</div>
+	</body>
 </html>
