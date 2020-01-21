@@ -1,5 +1,13 @@
 <html>
 <head>
+
+<style>
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+</style>
+
 <script>
 	function zoek(){
 		var x = document.getElementById("ingevoerdehond").value;
@@ -33,16 +41,16 @@
 </script>
 </head>
 
-<body>
-<img id=plaatje src=kingcharles.jpg  align="center" height="300">
+<body style="text-align:center" bgcolor="mistyrose">
+<img id=plaatje src=kingcharles.jpg  align="middle" height="300">
 <br></br>
-<div align="center">Watvoor hond zoekt u?</div>
+<div align="center"><i>Watvoor hond zoekt u?</i></div>
 <input id=ingevoerdehond value=Soort >
 <input value=Zoek type=button onclick=zoek()>
 <br></br>
 <div id=uitkomstdiv> uitkomst </div>
 <br></br>
-<div allign="center", onclick=aantal()>Hoeveel honden hebben wij hiervan?</div>
+<div allign="center", onclick=aantal()><i>Hoeveel honden hebben wij hiervan?</i></div>
 <br></br>
 <div id=aantaldogs> ---- </div>
 
